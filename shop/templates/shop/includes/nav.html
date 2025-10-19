@@ -1,0 +1,27 @@
+<header>
+    <div class="container-fluid bg-dark text-white p-0">
+        <div class="row align-items-center g-0">
+            <div class="col-12 col-md-2 d-flex justify-content-center py-3">
+                <h4>LOGO</h4>
+            </div>
+            <div class="col-12 col-md-6 d-flex justify-content-center py-3">
+                <ul class="list-inline d-flex flex-wrap justify-content-center mb-0">
+                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">Home</a>
+                    </li>
+                    <li class="list-inline-item mx-2"><a href="{% url 'men' %}" class="text-white text-decoration-none">Man</a>
+                    </li>
+                    <li class="list-inline-item mx-2"><a href="{% url 'women' %}" class="text-white text-decoration-none">Woman</a>
+                    </li>
+                    <li class="list-inline-item mx-2"><a href="{% url 'cart' %}" class="text-white text-decoration-none">Cart</a>
+                    </li>
+                    <li class="list-inline-item mx-2"><a href="#" class="text-white text-decoration-none">My
+                            Account</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 d-flex justify-content-center py-3">
+                <input type="text" class="form-control form-control-sm w-75 me-2" placeholder="Search">
+                <button class="btn btn-success">SEARCH</button>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,111 @@
+{% load static %}
+<div class="container-fluid p-0">
+
+    <!-- Carousel -->
+    <div class="row g-0">
+        <div class="col p-0">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active position-relative">
+                        <img src="{% static 'img/shop 1.jpg' %}" class="d-block carousel-img" alt="Shop 2">
+                        <div class="carousel-caption text-center position-absolute top-50 start-50 translate-middle">
+                            <h5>NEW COLLECTIONS ARRIVED</h5>
+                            <p>Check the latest collection</p>
+                            <a href="#" class="btn btn-success">BUY NOW</a>
+                            <a href="#" class="btn btn-danger mx-1">KNOW MORE</a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item position-relative">
+
+                        <img src="{% static 'img/shop 2.jpg' %}" class="d-block carousel-img" alt="Shop 2">
+                        <div class="carousel-caption text-center position-absolute top-50 start-50 translate-middle">
+                            <h5>EMI Available In</h5>
+                            <p>50% offer in some popular brand product</p>
+                            <a href="#" class="btn btn-success">Shop Now</a>
+                            <a href="#" class="btn btn-danger mx-1">Know More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container p-0">
+
+    <div class="row mt-4 g-3 p-0">
+        <div class="col-12 col-md-6 d-flex justify-content-center position-relative product-img-wrapper">
+            <img src="{% static 'img/for-men.jpg' %}" class="img-fluid w-75 product-img" alt="For Men">
+            <div class="position-absolute top-50 start-50 translate-middle text-white  px-3 py-1 rounded">
+                <h1>For Men</h1>
+            </div>
+        </div>
+
+
+
+        <div class="col-12 col-md-6 d-flex justify-content-center position-relative product-img-wrapper">
+            <img src="{% static 'img/for-women.jpg' %}" class="img-fluid w-75 product-img" alt="For Men">
+            <div class="position-absolute top-50 start-50 translate-middle text-white px-3 py-1 rounded">
+                <h1>For Women</h1>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container mt-5">
+    <h1 class="d-flex justify-content-center">For Men</h1>
+    <div class="row">
+        {% for post in men_posts %}
+        <div class="col col-sm-6 col-md-3">
+            <div class="card-body">
+                <img src="{{post.img}}" alt="" class="card-img h-50 w-100">
+            </div>
+            <h4 class="d-flex justify-content-center">{{post.original_price}}</h4>
+            <!-- <p class="card-text" style="text-align: center;">{{post.description}} </p> -->
+            <div class="card-footer d-flex justify-content-evenly">
+                <button class="btn btn-success ml-3">BuyNow</button>
+                <button class="btn btn-danger">Add to Cart</button>
+            </div>
+        </div>
+         {% endfor %}
+    </div>
+</div>
+
+
+<!-- FOR WOMEN -->
+ <div class="container mt-5">
+    <h1 class="d-flex justify-content-center">For Women</h1>
+    <div class="row">
+        {% for post in women_posts %}
+        <div class="col col-sm-6 col-md-3">
+            <div class="card-body">
+                <img src="{{post.img}}" alt="" class="card-img h-50 w-100">
+            </div>
+            <h4 class="d-flex justify-content-center">{{post.original_price}}</h4>
+            <!-- <p class="card-text" style="text-align: center;">{{post.description}} </p> -->
+            <div class="card-footer d-flex justify-content-evenly">
+                <button class="btn btn-success ml-3">BuyNow</button>
+                <button class="btn btn-danger">Add to Cart</button>
+            </div>
+        </div>
+         {% endfor %}
+    </div>
+</div>
