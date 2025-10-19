@@ -15,8 +15,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security
 # ----------------------------
 SECRET_KEY = 'django-insecure-&yxeg(qj(*mf)s*m8(gk7y%*-d3ex9x42regi6!-=obnzr-s2h'
-DEBUG = False
-ALLOWED_HOSTS = ["*"]
+DEBUG = True
+ALLOWED_HOSTS = [" https://online-shop-1-kk5n.onrender.com",'localhost','127.0.0.1']
 
 # ----------------------------
 # Installed apps
